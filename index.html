@@ -4,103 +4,162 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bioplásticos: Ayuda al Mundo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+    :root {
+      --verde: #2e7d32;
+      --verde-claro: #81c784;
+      --gris: #eeeeee;
+      --blanco: #ffffff;
+      --sombra: rgba(0,0,0,0.1);
+    }
+
     body {
+      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #e8f5e9;
-      margin: 0;
-      padding: 20px;
-      color: #2e7d32;
+      background: var(--gris);
+      color: var(--verde);
+      line-height: 1.6;
     }
+
     header {
-      background-color: #43a047;
-      padding: 20px;
-      border-radius: 10px;
+      background-color: var(--verde);
+      color: var(--blanco);
+      padding: 40px 20px;
       text-align: center;
-      color: white;
+      border-bottom: 5px solid #1b5e20;
     }
-    h1 {
+
+    header h1 {
+      font-size: 2.8em;
       margin: 0;
-      font-size: 2.5em;
     }
-    .frase {
+
+    header .frase {
       font-style: italic;
+      font-size: 1.3em;
       margin-top: 10px;
-      font-size: 1.2em;
+      opacity: 0.9;
     }
+
     section {
-      background-color: white;
-      border-radius: 10px;
-      padding: 20px;
-      margin-top: 20px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      background-color: var(--blanco);
+      margin: 20px auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px var(--sombra);
+      max-width: 900px;
+      animation: fadeIn 1s ease;
     }
+
+    h2 {
+      border-left: 6px solid var(--verde);
+      padding-left: 12px;
+      font-size: 1.8em;
+      margin-bottom: 15px;
+    }
+
     ul {
-      list-style-type: square;
       padding-left: 20px;
     }
+
+    li {
+      margin-bottom: 10px;
+    }
+
     .botones {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
       margin-top: 20px;
     }
-    button {
-      background-color: #66bb6a;
-      color: white;
+
+    .botones button {
+      flex: 1 1 200px;
+      background-color: var(--verde-claro);
       border: none;
-      padding: 10px 20px;
-      margin: 10px;
-      border-radius: 8px;
+      padding: 12px 20px;
       font-size: 1em;
+      color: var(--blanco);
+      border-radius: 8px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: all 0.3s ease;
+      font-weight: bold;
     }
-    button:hover {
-      background-color: #388e3c;
+
+    .botones button:hover {
+      background-color: var(--verde);
     }
+
+    .impacto {
+      background-color: #fbe9e7;
+      color: #d84315;
+      font-weight: bold;
+    }
+
     footer {
       text-align: center;
-      margin-top: 30px;
+      padding: 20px;
       font-size: 0.9em;
       color: #555;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .icono {
+      color: var(--verde);
+      margin-right: 10px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Bioplásticos: Una Innovación Verde</h1>
+  <h1><i class="fas fa-leaf icono"></i>Bioplásticos: Una Innovación Verde</h1>
   <p class="frase">“Si ayudas al mundo, él te puede ayudar.”</p>
 </header>
 
 <section>
-  <h2>¿Qué son los Bioplásticos?</h2>
-  <p>Son materiales derivados de fuentes renovables como maíz, papa o caña de azúcar que se descomponen naturalmente, a diferencia del plástico común que tarda siglos en degradarse.</p>
+  <h2><i class="fas fa-flask icono"></i>¿Qué son los Bioplásticos?</h2>
+  <p>Son materiales sostenibles creados a partir de recursos naturales como maíz, yuca o papa. A diferencia del plástico común, estos se degradan más rápido sin dejar rastro tóxico.</p>
 </section>
 
 <section>
-  <h2>¿Por qué son importantes?</h2>
-  <p>Los bioplásticos ayudan a reducir la contaminación del planeta y ofrecen una alternativa sostenible para la vida moderna.</p>
+  <h2><i class="fas fa-recycle icono"></i>¿Por qué importan?</h2>
+  <p>Usar bioplásticos significa reducir la dependencia del petróleo, disminuir los residuos en la naturaleza y apostar por una economía circular y más limpia.</p>
 </section>
 
-<section>
-  <h2>¿Qué pasa si no actuamos?</h2>
+<section class="impacto">
+  <h2><i class="fas fa-exclamation-triangle icono"></i>Si no actuamos, pasará esto:</h2>
   <ul>
-    <li>Contaminación masiva de océanos y ríos.</li>
-    <li>Animales muriendo por ingerir plástico.</li>
-    <li>Aire tóxico por quema de residuos plásticos.</li>
-    <li>Incremento del cambio climático.</li>
-    <li>Futuras generaciones sin recursos limpios.</li>
+    <li>🌊 Toneladas de plástico ahogando nuestros océanos.</li>
+    <li>🐢 Animales muertos por ingerir microplásticos.</li>
+    <li>🔥 Aumento de gases tóxicos por la quema de residuos.</li>
+    <li>⛅ Clima extremo debido al efecto invernadero.</li>
+    <li>🧒 Niños creciendo en un mundo contaminado e injusto.</li>
   </ul>
 </section>
 
-<section class="botones">
-  <h2>¿Qué puedes hacer tú?</h2>
-  <button onclick="alert('¡Gracias por usar menos plástico!')">Usar menos plástico</button>
-  <button onclick="alert('¡Gracias por reciclar!')">Reciclar</button>
-  <button onclick="alert('¡Gracias por difundir el mensaje!')">Compartir esta idea</button>
+<section>
+  <h2><i class="fas fa-hands-helping icono"></i>¿Qué puedes hacer tú?</h2>
+  <div class="botones">
+    <button onclick="alert('Gracias por elegir productos sostenibles.')"><i class="fas fa-shopping-bag"></i> Comprar responsablemente</button>
+    <button onclick="alert('¡Reciclar es un acto de amor al planeta!')"><i class="fas fa-trash-alt"></i> Reciclar siempre</button>
+    <button onclick="alert('Gracias por compartir este mensaje.')"><i class="fas fa-share-alt"></i> Compartir esta causa</button>
+  </div>
 </section>
 
 <footer>
-  Proyecto hecho con ❤️ por un estudiante que quiere cambiar el mundo.
+  Hecho con 💚 por quienes sí quieren cambiar el mundo.
 </footer>
 
 </body>
